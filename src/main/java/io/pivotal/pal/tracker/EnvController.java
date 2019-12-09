@@ -11,19 +11,15 @@ import java.util.Map;
 @RestController
 public class EnvController {
 
-
     private String port;
-
     private String memoryLimit;
-
     private String cfInstanceIndex;
-
     private String cfInstanceAddr;
 
     public EnvController(
-            @Value("${cf.port:NOT SET}")
+            @Value("${cf.instance.port:NOT SET}")
             String port,
-            @Value("${cf.memory.limit:NOT SET}")
+            @Value("${cf.instance.memory.limit:NOT SET}")
             String memoryLimit,
             @Value("${cf.instance.index:NOT SET}")
             String cfInstanceIndex,
