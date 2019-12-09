@@ -23,6 +23,25 @@ repositories {
     mavenCentral()
 }
 
+assignments {
+    apiUrl = "https://assignments.education.pivotal.io/"
+    emails = [
+            "wisa_terhune-praphruettam@bcbsil.com",
+            "andrew_miller@bcbsil.com",
+    ]
+    cohortIdentifier = "349803496"
+}
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
 }
+
+bootRun.environment([
+        "WELCOME_MESSAGE": "hello",
+])
+
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+])
