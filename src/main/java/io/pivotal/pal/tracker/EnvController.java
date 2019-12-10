@@ -34,7 +34,7 @@ public class EnvController {
 
     @GetMapping("/env")
     public Map<String, String> getEnv() {
-        return new HashMap<>()
+        return new HashMap<String, String>()
         {
             {
                 put("PORT", port);
